@@ -1,0 +1,31 @@
+.App-Register-Row{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+.App-Register-Row input{
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+}
+
+.App-Register-Row button{
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+     background-color: darksalmon;
+   color: black;
+   border: 2px solid darksalmon;
+}
+.App-Register-Row button:hover{
+ background-color: blueviolet;
+    color: white;
+    border: 2px solid blueviolet;
+}
