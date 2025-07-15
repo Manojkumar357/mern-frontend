@@ -1,3 +1,31 @@
+/* Navigation Links Container */
 *{
-    margin:0px;
+   margin: 0px;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* space between buttons */
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+}
+
+/* Link Styling */
+.nav-links a {
+  text-decoration: none;        /* remove underline */
+  background-color: #334155;    /* initial background */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  background-color: #38bdf8;  /* sky blue */
+  color: #0f172a;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
