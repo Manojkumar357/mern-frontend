@@ -1,32 +1,94 @@
-.App-Register-Row{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin: 10px;
-    background-color: wheat;
-    border-radius: 10px;
-    border: 5px solid black;
+.App-Register-Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-Register-Row input{
-    padding: 5px;
-    margin: 5px;
-    width: 100%;
+.register-card {
+  background-color: #1e293b;
+  padding: 20px 50px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4);
+  width: 600px;
+  text-align: center;
 }
 
-.App-Register-Row button{
-    padding: 5px;
-    margin: 5px;
-    width: 100%;
-    border-radius: 20px;
-    height: 40px;
-    cursor: pointer;
-     background-color: darksalmon;
-   color: black;
-   border: 2px solid darksalmon;
+.register-card h2 {
+  margin-bottom: 30px;
+  color: #facc15;
+  font-size: 32px;
 }
-.App-Register-Row button:hover{
- background-color: blueviolet;
-    color: white;
-    border: 2px solid blueviolet;
+
+.register-card input {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #334155;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.register-card input:focus {
+  background-color: #475569;
+  outline: none;
+}
+
+.register-card button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #facc15;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.register-card button:hover {
+  background-color: #eab308;
+}
+
+.register-card hr {
+  border: 0;
+  height: 1px;
+  background-color: #475569;
+  margin: 30px 0;
+}
+
+.register-card .nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.register-card .nav a:hover {
+  color: red;
+}
+
+.error {
+  color: #f87171;
+  background-color: #7f1d1d;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.success {
+  color: #4ade80;
+  background-color: #064e3b;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }

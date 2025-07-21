@@ -1,0 +1,169 @@
+.products-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f4f6f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.products-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product-form input {
+  display: block;
+  margin-bottom: 1.2rem;
+  padding: 0.9rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.product-form input::placeholder {
+  color: #999;
+}
+
+.product-form input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.btn {
+  padding: 0.9rem 1.5rem;
+  margin-right: 0.7rem;
+  margin-top: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+/* Colored buttons */
+.add-btn {
+  background-color: #27ae60;
+  color: white;
+}
+.add-btn:hover {
+  background-color: #219653;
+}
+
+.update-btn {
+  background-color: #2980b9;
+  color: white;
+}
+.update-btn:hover {
+  background-color: #2471a3;
+}
+
+.cancel-btn {
+  background-color: #7f8c8d;
+  color: white;
+}
+.cancel-btn:hover {
+  background-color: #707b7c;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.edit-btn {
+  background-color: #f39c12;
+  color: white;
+}
+.edit-btn:hover {
+  background-color: #d68910;
+}
+
+.search-section {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-section input {
+  padding: 0.8rem;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.search-btn {
+  background-color: #8e44ad;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.search-btn:hover {
+  background-color: #7d3c98;
+}
+
+.product-table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 1.2rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.product-table th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  background-color: #3498db;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #2980b9;
+}

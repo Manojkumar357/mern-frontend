@@ -1,0 +1,129 @@
+/* Profile.css */
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f5f9;
+  min-height: 80vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-card {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-left {
+  background-color: #4f46e5;
+  color: white;
+  padding: 2rem;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.logout-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #dc2626;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.03);
+}
+
+.profile-right {
+  flex: 2;
+  padding: 2rem 3rem;
+}
+
+.profile-right h2 {
+  margin-bottom: 2rem;
+  color: #111827;
+  font-size: 2rem;
+}
+
+.profile-right input {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-right input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
+  outline: none;
+}
+
+.update-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.update-btn:hover {
+  background-color: #4338ca;
+  transform: scale(1.03);
+}
+
+.error-msg {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+  }
+
+  .profile-left,
+  .profile-right {
+    padding: 2rem;
+  }
+
+  .logout-btn,
+  .update-btn {
+    width: 100%;
+  }
+}

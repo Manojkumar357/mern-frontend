@@ -1,0 +1,178 @@
+/* Users.css */
+
+.user-management {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9fafb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.user-management h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.user-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.user-form input,
+.user-form select {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f3f4f6;
+  transition: 0.3s;
+}
+
+.user-form input:focus,
+.user-form select:focus {
+  border-color: #6366f1;
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.button-group {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn.add {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn.update {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn.cancel {
+  background-color: #9ca3af;
+  color: white;
+}
+
+.btn.edit {
+  background-color: #facc15;
+  color: #1f2937;
+}
+
+.btn.delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search-bar input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table th {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4b5563;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}

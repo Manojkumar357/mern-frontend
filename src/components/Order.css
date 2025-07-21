@@ -1,0 +1,119 @@
+/* Order.css */
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f5f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+/* Container */
+.orders-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Heading */
+.orders-container h3 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+.orders-container h3::after {
+  content: "Your recent purchases";
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin-top: 0.4rem;
+}
+
+/* Order Card */
+.order-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.order-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.order-card p {
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.order-card p strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.order-card p.status {
+  font-weight: 700;
+  color: #10b981; /* green for success */
+}
+
+/* Table Wrapper */
+.order-table {
+  margin-top: 1.2rem;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+/* Table */
+.order-table table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.order-table thead {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.order-table th,
+.order-table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.order-table tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px dashed #cbd5e1;
+  margin: 2rem 0;
+}
+

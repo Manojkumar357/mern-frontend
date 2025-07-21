@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import axios from "axios";
+import "./Products.css"
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState();
@@ -39,7 +40,7 @@ export default function Products() {
       const url = `${API_URL}/api/products/${id}`;
       const result = await axios.delete(url);
       setError("User Deleted Successfully");
-      fetchUsers();
+      fetchProducts();
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
@@ -70,7 +71,7 @@ export default function Products() {
   };
 
   const handleEdit = (product) => {
-    setEditId(user._id);
+    setEditId(product._id);
     setForm({
       ...form,
       productName: product.productName,
@@ -115,100 +116,113 @@ export default function Products() {
     });
   };
   return (
-    <div>
-      <h2>Product Management</h2>
-      {error}
-      <div>
-        <form ref={frmRef}>
-          <input
-            name="productName"
-            value={form.productName}
-            type="text"
-            placeholder="Product Name"
-            onChange={handleChange}
-            required
-          />
-          <input
-            name="description"
-            value={form.description}
-            type="text"
-            placeholder="Description"
-            onChange={handleChange}
-            required
-          />
-          <input
-            name="price"
-            value={form.price}
-            type="text"
-            placeholder="Price Address"
-            onChange={handleChange}
-            required
-          />
-          <input
-            name="imgUrl"
-            value={form.imgUrl}
-            type="text"
-            placeholder="Image Url"
-            onChange={handleChange}
-            required
-          />
+  <div className="products-page">
+    <h2 className="products-heading">Product Management</h2>
 
+    {error && <div className="error-message">{error}</div>}
 
+    <div className="form-section">
+      <form ref={frmRef} className="product-form">
+        <input
+          name="productName"
+          value={form.productName}
+          type="text"
+          placeholder="Product Name"
+          onChange={handleChange}
+          required
+        />
+        <input
+          name="description"
+          value={form.description}
+          type="text"
+          placeholder="Description"
+          onChange={handleChange}
+          required
+        />
+        <input
+          name="price"
+          value={form.price}
+          type="text"
+          placeholder="Price"
+          onChange={handleChange}
+          required
+        />
+        <input
+          name="imgUrl"
+          value={form.imgUrl}
+          type="text"
+          placeholder="Image URL"
+          onChange={handleChange}
+          required
+        />
+        <div className="form-buttons">
           {editId ? (
             <>
-              <button onClick={handleUpdate}>Update</button>
-              <button onClick={handleCancel}>Cancel</button>
+              <button className="btn update-btn" onClick={handleUpdate}>Update</button>
+              <button className="btn cancel-btn" onClick={handleCancel}>Cancel</button>
             </>
           ) : (
-            <button onClick={handleAdd}>Add</button>
+            <button className="btn add-btn" onClick={handleAdd}>Add</button>
           )}
-        </form>
-      </div>
-      <div>
-        <input type="text" placeholder="Search.." onChange={(e) => setSearchVal(e.target.value)} />
-        <button onClick={fetchProducts}>Search</button>
-      </div>
-      <div>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Product Name</th>
-              <th>Description</th>
-              <th>Price</th>
-              <th>Image Url</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          {products.map((value) => (
-            <tbody key={value._id}>
-              <tr>
-                <td>{value.productName}</td>
-                <td>{value.description}</td>
-                <td>{value.price}</td>
-                <td>{value.imgUrl}</td>
-                <td>
-                  <button onClick={() => handleEdit(value)}>Edit</button>
-                  <button onClick={() => handleDelete(value._id)}>
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          ))}
-        </table>
-      </div>
-      <div>
-        <button disabled={page === 1} onClick={() => setPage(page - 1)}>
-          Previous
-        </button>
-        Page {page} of {totalPages}
-        <button
-          disabled={page === totalPages}
-          onClick={() => setPage(page + 1)}
-        >
-          Next
-        </button>
-      </div>
+        </div>
+      </form>
     </div>
-  );
+
+    <div className="search-section">
+      <input
+        type="text"
+        placeholder="Search products..."
+        onChange={(e) => setSearchVal(e.target.value)}
+      />
+      <button className="btn search-btn" onClick={fetchProducts}>Search</button>
+    </div>
+
+    <div className="table-section">
+      <table className="product-table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image URL</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((value) => (
+            <tr key={value._id}>
+              <td>{value.productName}</td>
+              <td>{value.description}</td>
+              <td>{value.price}</td>
+              <td>{value.imgUrl}</td>
+              <td>
+                <button className="btn edit-btn" onClick={() => handleEdit(value)}>Update</button>
+                <button className="btn delete-btn" onClick={() => handleDelete(value._id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div className="pagination">
+      <button
+        className="btn pagination-btn"
+        disabled={page === 1}
+        onClick={() => setPage(page - 1)}
+      >
+        Previous
+      </button>
+      <span>Page {page} of {totalPages}</span>
+      <button
+        className="btn pagination-btn"
+        disabled={page === totalPages}
+        onClick={() => setPage(page + 1)}
+      >
+        Next
+      </button>
+    </div>
+  </div>
+);
+
 }
