@@ -17,7 +17,8 @@ export default function Login() {
       const url = `${API_URL}/api/users/login`;
       const result = await axios.post(url, user);
       setUser(result.data);
-
+ localStorage.setItem("user", JSON.stringify(result.data.user));
+    localStorage.setItem("token", result.data.token);
       // Show temporary success message
       setSuccess("You have successfully logged in!");
       setTimeout(() => {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AppContext } from "../App";
-import "./Orders.css";
 import { useNavigate } from "react-router-dom";
+import "./Orders.css";
 
 export default function Orders() {
   const [orders, setOrders] = useState([]);
@@ -17,7 +17,6 @@ export default function Orders() {
   const navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_URL;
 
-  // Redirect if user is not logged in
   useEffect(() => {
     if (!user || !user.token) {
       navigate("/login");
@@ -36,11 +35,13 @@ export default function Orders() {
         },
       });
 
+      console.log("Fetched orders:", res.data);
+
       setOrders(res.data.orders || []);
       setTotalPages(res.data.total || 1);
       setError("");
     } catch (err) {
-      console.error(err);
+      console.error("Error fetching orders:", err);
       if (err.response?.status === 401) {
         localStorage.removeItem("user");
         navigate("/login");

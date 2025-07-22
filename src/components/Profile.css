@@ -1,4 +1,9 @@
 /* Profile.css */
+.profile-name {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: center;
+}
 
 .profile-wrapper {
   display: flex;
